@@ -1,0 +1,214 @@
+.Tudo {
+    /* margin-bottom: 50px; */
+}
+
+.TudoMobile {
+    display: none;
+}
+
+.Card {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+}
+
+.Card .Conteudo {
+    flex: 1;
+    padding: 30px 0px;
+    color: #800000;
+    font-size: 70px;
+    /* width: 50%; */
+    overflow: hidden;
+}
+
+.Card .Conteudo .Texto {
+    font-size: 40px;
+    color: black;
+    display: block;
+}
+.Card .Conteudo .TextoItems {
+    font-size: 40px;
+    margin-left: 20%;
+    color: black;
+}
+
+.Card .Conteudo .Video {
+    overflow: hidden;
+    /* border: 3px solid black; */
+    border-radius: 10px;
+    width: 78%;
+    margin: auto;
+    margin-top: 10%;
+    box-shadow: 0px 8px 8px 1px grey;
+}
+
+.Card .Conteudo .BtnGoogle {
+    margin-top: 8%;
+    width: 80%;
+    height: 80px;
+    background-color: green;
+    box-shadow: 0px 8px 8px 1px grey;
+}
+
+.Card .Conteudo .BtnApple {
+    width: 80%;
+    height: 80px;
+    margin: 8% 8%;
+    background-color: rgb(2, 0, 0);
+    color: white;
+    box-shadow: 0px 8px 8px 1px grey;
+}
+
+.Linha {
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+.ImgBox {
+    box-shadow: 0px 8px 8px 1px grey;
+}
+.sliderimg {
+    width: 200px;
+    height: 200px;
+    /* object-fit: contain; */
+    position: relative;
+}
+.Card .Conteudo .Circulo {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 40px;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    box-shadow: 0px 8px 8px 1px grey;
+
+}
+.Item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ItemNumero {
+    position: absolute;
+    margin-left: 2.3%;
+}
+.Modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ModalConteudo {
+    background-color: none;
+    border: 2px solid #000;
+    box-shadow:  4px 0px 20px 1px black;
+    
+}
+.imgModal {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .Tudo {
+        display: none;
+    }
+    .TudoMobile {
+        display: block;
+    }
+    .CardMobileTest {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        width: 100%;
+    }
+    .CardMobileTest .Conteudo {
+        flex: 1;
+        padding: 10px 0px;
+        color: maroon;
+        font-size: 30px;
+        width: 100%;
+    }
+    .CardMobileTest .Conteudo .Texto {
+        font-size: 15px;
+        color: black;
+        margin-top: -5%;
+        margin-left: 2%;
+    }
+    .CardMobileTest .Conteudo .BtnGoogle {
+        margin-top: 8%;
+        width: 80%;
+        height: 40px;
+        background-color: green;
+        font-size: 0.5rem;
+        box-shadow: 0px 8px 8px 1px grey;
+    }
+    .CardMobileTest .Conteudo .BtnApple {
+        width: 80%;
+        height: 40px;
+        margin: 8% 8%;
+        font-size: 0.5rem;
+        box-shadow: 0px 8px 8px 1px grey;
+    }
+    .CardMobileTest .Conteudo .Video {
+        overflow: hidden;
+        /* border: 3px solid black; */
+        border-radius: 10px;
+        width: 80%;
+        margin: auto;
+        margin-top: 20%;
+        box-shadow: 0px 8px 8px 1px grey;
+    }
+    .Card .Conteudo .Circulo {
+        width: 0;
+        height: 0;
+        background-color: lightgray;
+        border-radius: 10px;
+        flex-wrap: wrap;
+        margin-left: 5%;
+        box-shadow: -1px 2px 8px 1px grey;
+    }
+    .Card .Conteudo .TextoItems {
+        font-size: 10px;
+        align-self: flex-end;
+        margin-left: 20%;
+        
+    }
+    .sliderimg {
+        width: 60px;
+        height: 100%;
+        object-fit: contain;
+        position: relative;
+    }
+    .Linha {
+        border: 1px solid black;
+        border-radius: 6px;
+    }
+    .ItemNumero {
+        position: absolute;
+        font-size: 15px;
+        margin-right: 10px;
+        box-shadow: -5px 4px 8px 0px grey;
+        background: lightgray;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+    }
+    .Item {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .ModalConteudo {
+        width: 80%;
+        background-color: none;
+        border: 2px solid black;
+        box-shadow:  4px 0px 20px 1px black;
+    }
+    .imgModal {
+        width: 100%;
+        height: 100%;
+    }
+}

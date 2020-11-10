@@ -1,0 +1,56 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    position: absolute;
+    top: 0px;
+}
+
+.App-logo {
+    /* animation: App-logo-spin infinite 5s linear; */
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.TituloBox {
+    margin-right: 43%;
+    /* margin-left: 15%; */
+}
+
+.TituloBox .Titulo {
+    font-size: 4rem;
+    margin: 0px;
+    color: maroon;
+}
+
+
+/* Ipad */
+
+@media screen and (max-width: 1024px) {
+    .Header {
+        background-color: black;
+    }
+    .TituloBox {
+        margin-right: 36%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .TituloBox .Titulo {
+        font-size: 3rem;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 260px) {
+    .TituloBox .Titulo {
+        font-size: 2rem;
+        margin: 0px;
+    }
+}
