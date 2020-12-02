@@ -24,9 +24,12 @@
 }
 
 .Card .Conteudo .Texto {
-    font-size: 40px;
-    color: black;
+    font-size: 25px;
+    color: white;
     display: block;
+    margin:10px 20px;
+    text-align: justify;
+    font-family: Poppins-Light;
 }
 .Card .Conteudo .TextoItems {
     font-size: 40px;
@@ -36,29 +39,20 @@
 
 .Card .Conteudo .Video {
     overflow: hidden;
-    /* border: 3px solid black; */
     border-radius: 10px;
-    width: 78%;
-    margin: auto;
-    margin-top: 10%;
     box-shadow: 0px 8px 8px 1px grey;
+    margin: 20px 50px;
+}
+
+.googlePlay{
+    width: 50%;
 }
 
 .Card .Conteudo .BtnGoogle {
     margin-top: 8%;
-    width: 80%;
+    width: 50%;
     height: 80px;
-    background-color: green;
-    box-shadow: 0px 8px 8px 1px grey;
-}
-
-.Card .Conteudo .BtnApple {
-    width: 80%;
-    height: 80px;
-    margin: 8% 8%;
-    background-color: rgb(2, 0, 0);
-    color: white;
-    box-shadow: 0px 8px 8px 1px grey;
+    background-image: url(../../assets/image/google-play-badge.png);
 }
 
 .Linha {
@@ -154,11 +148,7 @@
     }
     .CardMobileTest .Conteudo .Video {
         overflow: hidden;
-        /* border: 3px solid black; */
         border-radius: 10px;
-        width: 80%;
-        margin: auto;
-        margin-top: 20%;
         box-shadow: 0px 8px 8px 1px grey;
     }
     .Card .Conteudo .Circulo {

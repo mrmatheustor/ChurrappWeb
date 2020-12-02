@@ -12,3 +12,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'candy';
+  src: local('candy'), url(./fonts/candy.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'poppins-medium';
+  src: local('poppins-medium'), url(./fonts/poppins/Poppins-Medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'poppins-light';
+  src: local('poppins-light'), url(./fonts/poppins/Poppins-Light.ttf) format('truetype');
+}
+
