@@ -1,3 +1,5 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 .Tudo {
     /* margin-bottom: 50px; */
 }
@@ -14,6 +16,90 @@
     width: 100%;
 }
 
+.alice-carousel {
+    background: rgb(248, 248, 248);
+}
+
+.alice-carousel__stage-item{
+    width:auto !important;
+    margin: 15px 0 0 0;
+}
+
+
+.alice-carousel__dots-item{
+    background-color: black;
+}
+
+.alice-carousel__dots-item:hover, .alice-carousel__dots-item.__active{
+    background-color: maroon;
+}
+
+.alice-carousel__dots-item.__active{
+    width: 10px;
+    height: 10px;
+}
+
+.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0;
+    color: black;
+}
+
+.sliderimg{
+    height: 450px;
+    margin:0 10px;
+    border: 1px solid gray
+}
+
+.Funcionalidades{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardFunc{
+    width: 23%;
+    padding: 1%;
+}
+
+.linha1{
+    display: flex;
+}
+
+.numFunc{
+    background-color: maroon;
+    color: white;
+    border-radius: 50%;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    display: flex;
+    justify-content: center;
+    font-family: poppins-medium;
+    font-size: 100%;
+    align-items: center;
+}
+
+.Churrapp{ 
+    color: white !important;
+    font-family: poppins-medium;
+    font-size: 100%;
+}
+
+.titulo{
+    color: maroon !important;
+    padding: 0 0 6px 15px;
+    font-family: poppins-medium;
+    font-size: 100%;
+}
+
+.descricao{
+    font-family: poppins-light;
+    font-size: 80%;
+    margin: 5px 0 0 0px;
+}
+
 .Card .Conteudo {
     flex: 1;
     padding: 30px 0px;
@@ -24,7 +110,7 @@
 }
 
 .Card .Conteudo .Texto {
-    font-size: 25px;
+    font-size: 50%;
     color: white;
     display: block;
     margin:10px 20px;
@@ -32,8 +118,7 @@
     font-family: Poppins-Light;
 }
 .Card .Conteudo .TextoItems {
-    font-size: 40px;
-    margin-left: 20%;
+    font-size: 30px;
     color: black;
 }
 
@@ -46,6 +131,7 @@
 
 .googlePlay{
     width: 50%;
+    cursor: pointer;
 }
 
 .Card .Conteudo .BtnGoogle {
@@ -63,20 +149,18 @@
 .ImgBox {
     box-shadow: 0px 8px 8px 1px grey;
 }
-.sliderimg {
-    width: 200px;
-    height: 200px;
-    /* object-fit: contain; */
-    position: relative;
-}
+
 .Card .Conteudo .Circulo {
-    width: 80px;
-    height: 80px;
-    background-color: white;
+    width: 30px;
+    height: 30px;
+    background-color: maroon;
     border-radius: 40px;
+    font-size: 20px;
+    color:white;
     flex-wrap: wrap;
     margin-left: 5%;
     box-shadow: 0px 8px 8px 1px grey;
+    font-family: poppins-medium;
 
 }
 .Item {

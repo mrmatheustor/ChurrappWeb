@@ -4,6 +4,7 @@
     width: 100%;
     position: relative;
     bottom: 0;
+    flex-direction: row-reverse;
 }
 
 .Footer label {
