@@ -1,9 +1,4 @@
 @import "react-alice-carousel/lib/alice-carousel.css";
-
-.Tudo {
-    /* margin-bottom: 50px; */
-}
-
 .TudoMobile {
     display: none;
 }
