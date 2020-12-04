@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Modal, Fade, Backdrop } from '@material-ui/core'
 import '../card/Card.css'
+import Icon from '../../assets/image/icon.png';
 import GooglePlay from '../../assets/image/google-play-badge.png';
 import { Player } from 'video-react'
 import AliceCarousel from 'react-alice-carousel';
