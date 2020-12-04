@@ -44,28 +44,3 @@
     color: #800000;
 }
 
-
-/* Ipad */
-
-@media screen and (max-width: 1024px) {
-    .Header {
-        background-color: black;
-    }
-    .TituloBox {
-        margin-right: 36%;
-    }
-}
-
-@media screen and (max-width: 340px) {
-    .Titulo {
-        font-size: 3rem;
-        margin: 0px;
-    }
-}
-
-@media screen and (max-width: 260px) {
-    .Titulo {
-        font-size: 2rem;
-        margin: 0px;
-    }
-}

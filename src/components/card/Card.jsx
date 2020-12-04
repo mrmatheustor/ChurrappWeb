@@ -1,9 +1,6 @@
 import React from 'react'
-import { Button, Modal, Fade, Backdrop, Zoom, Grow } from '@material-ui/core'
+import { Button, Modal, Fade, Backdrop } from '@material-ui/core'
 import '../card/Card.css'
-import Tumb from '../../assets/image/tumb.png';
-import Video from '../../assets/video/video.mp4';
-import Icon from '../../assets/image/icon.png';
 import GooglePlay from '../../assets/image/google-play-badge.png';
 import { Player } from 'video-react'
 import AliceCarousel from 'react-alice-carousel';
@@ -45,7 +42,6 @@ import '../../fonts/poppins/Poppins-Light.ttf'
 export default function Card() {
     const [open, setOpen] = React.useState(false);
     const [imgURL, setImgURL] = React.useState();
-    const [checked, setChecked] = React.useState(false);
 
     const modalOpen = () => {
         setOpen(!open);
@@ -90,8 +86,7 @@ export default function Card() {
     }
 
     React.useEffect(() => {
-        setChecked(true);
-        Aos.init({ duration: 3000 , delay:1000, once:true})
+        Aos.init({ duration: 3000, delay: 1000, once: true })
     }, []);
 
     return (
@@ -114,208 +109,84 @@ export default function Card() {
                     </div>
                 </Fade>
             </Modal>
-            <div className="Tudo">
-                <div className="Card" style={{ background: 'maroon' }}>
-                    <div data-aos="zoom-in" data-aos-delay="50" className={"Conteudo leftSide1"}>
-                        <div className="Churrapp">O que é o Churrapp?</div>
-                        <div className="Texto">
-                            O Churrapp é uma plataforma pensada para facilitar a organização do seu churrasco com os amigos.
-                            Desenvolvida para ser um grande aliado dos amantes de churrasco.
+            <div className={"Card section1"} style={{ background: 'maroon' }}>
+                <div data-aos="zoom-in" data-aos-delay="50" className={"Conteudo leftSide1"}>
+                    <div className="Churrapp">O que é o Churrapp?</div>
+                    <div className="Texto">
+                        O Churrapp é uma plataforma pensada para facilitar a organização do seu churrasco com os amigos.
+                        Desenvolvida para ser um grande aliado dos amantes de churrasco.
                             </div>
-                        {/* <a onClick={downloadChurrapp}><img src={GooglePlay} className="googlePlay" alt="Link para download" /></a> */}
-                        <div className="breveGooglePlay" > Breve no Google Play</div>
-                    </div>
-                    <div data-aos="zoom-in" data-aos-delay="500" className="Conteudo" style={{ marginTop: '80px' }}>
-                        <div className="Video">
-                            <Player playsInline
-                                poster={Tumb}
-                                src={Video}></Player>
-                        </div>
-                    </div>
+                    {/* <a onClick={downloadChurrapp}><img src={GooglePlay} className="googlePlay" alt="Link para download" /></a> */}
+                    <div className="breveGooglePlay" > Breve no Google Play</div>
                 </div>
-                <div className="Linha"></div>
-                <div data-aos="zoom-in-up" >
-                    <AliceCarousel mouseTracking autoWidth={true} autoplay={true} infinite={true} items={items} />
-                </div>
-                <div className="Linha"></div>
-                <div className="Funcionalidades" id="Teste">
-                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="50">
-                        <div className="linha1">
-                            <div className="numFunc">1</div>
-                            <div className="titulo">Controle de Presença</div>
-                        </div>
-                        <div className="descricao">Tenha sempre a um toque a lista com os convidados
-                        que vão ou não participar do seu churras!</div>
-                    </div>
-                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="250">
-                        <div className="linha1">
-                            <div className="numFunc">2</div>
-                            <div className="titulo">Controle de Pagamento</div>
-                        </div>
-                        <div className="descricao">Registre os convidados que ja te pagaram,
-                        e tenha de forma direta quem ainda falta pagar.</div>
-                    </div>
-                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="450">
-                        <div className="linha1">
-                            <div className="numFunc">3</div>
-                            <div className="titulo">Cálculo de Preço do Churrasco</div>
-                        </div>
-                        <div className="descricao">Nós calculamos quanto vai custar o seu churrasco,
-                        com base nos itens que você deseja servir, e dividirmos para os seus amigos de forma automatica.</div>
-                    </div>
-                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="650">
-                        <div className="linha1">
-                            <div className="numFunc">4</div>
-                            <div className="titulo">Sugestão para Itens e Quantidades</div>
-                        </div>
-                        <div className="descricao">Separamos uma sugestão de itens para o seu churras, levando em conta o numero de convidados, agilizando a criação do seu evento.</div>
-                    </div>
-                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="850">
-                        <div className="linha1">
-                            <div className="numFunc">5</div>
-                            <div className="titulo">Limite para Confirmação de Presença</div>
-                        </div>
-                        <div className="descricao">No Churrapp você pode definir uma data limite para a confirmação de presença, evitando surpresas no churrasco.</div>
-                    </div>
-                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="1050">
-                        <div className="linha1">
-                            <div className="numFunc">6</div>
-                            <div className="titulo">Cardapio Vegano e Vegetariano</div>
-                        </div>
-                        <div className="descricao">Nós montamos uma lsita de itens vegetarianos e veganos para que todos os seus amigos possam curtir com você, mesmo os que não comem carne.</div>
-                    </div>
-                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="1250">
-                        <div className="linha1">
-                            <div className="numFunc">7</div>
-                            <div className="titulo">Histórico de Churrascos</div>
-                        </div>
-                        <div className="descricao">Lembra aquele churrasco super legal que a comida estava deliciosa, os papos estavem divertidos? Nós lembramos todos o churrascos para que você possa consultar e repetir.</div>
-                    </div>
-                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="1450">
-                        <div className="linha1">
-                            <div className="numFunc">8</div>
-                            <div className="titulo">Lembrete de Carvão e Acendedor</div>
-                        </div>
-                        <div className="descricao">Itens essenciais para um churrasco, mas que as vezes esquecemos, o Churrapp te lembra!</div>
-                    </div>
+                <div data-aos="zoom-in" data-aos-delay="500" className="Video">
+                    <Player playsInline style={{paddingTop:'50%'}} poster={app10} src='https://churrappuploadteste.s3.amazonaws.com/churrappWeb/videoChurrapp.mp4'></Player>
                 </div>
             </div>
-            <div className="TudoMobile">
-                <Grow in={checked}>
-                    <div className="CardMobileTest">
-                        <div className="Conteudo">
-                            <h3>O que é o Churrapp?</h3>
-                            <div className="Texto">
-                                Uma nova forma de organizar seu Churras!
-                        </div>
-                            <div style={{ display: "flex", flexDirection: "row" }}>
-                                <Button className="BtnApple" variant="contained">Apple Store</Button>
-                                <Button className="BtnGoogle" variant="contained">Google Play</Button>
-                            </div>
-                        </div>
-                        <div className="Conteudo">
-                            <div className="Video">
-                                <Player playsInline
-                                    poster={Tumb}
-                                    src={Video}></Player>
-                            </div>
-                        </div>
+            <div className="Linha"></div>
+            <div data-aos="zoom-in-up" >
+                <AliceCarousel mouseTracking autoWidth={true} autoplay={true} infinite={true} items={items} />
+            </div>
+            <div className="Linha"></div>
+            <div className="Funcionalidades" id="Teste">
+                <div className="cardFunc" data-aos="zoom-in" data-aos-delay="50">
+                    <div className="linha1">
+                        <div className="numFunc">1</div>
+                        <div className="titulo">Controle de Presença</div>
                     </div>
-                </Grow>
-                <div className="Linha"></div>
-                <div style={{ justifyContent: "space-between", fontSize: 40 }}>
-                    <div>
-                        <Grow in={checked} {...(checked ? { timeout: 500 } : {})}>
-                            <div className="Card">
-                                <div className="Conteudo">
-                                    <Button><img src={app1} className="sliderimg" alt="" onClick={() => getImg(Tumb)} /></Button>
-                                    <Button><img src={app2} className="sliderimg" alt="" onClick={() => getImg(Icon)} /></Button>
-                                    <Button><img src={app3} className="sliderimg" alt="" onClick={() => getImg(Tumb)} /></Button>
-                                    <Button><img src={app4} className="sliderimg" alt="" onClick={() => getImg(Icon)} /></Button>
-                                    <Button><img src={app5} className="sliderimg" alt="" onClick={() => getImg(Tumb)} /></Button>
-                                </div>
-                            </div>
-                        </Grow>
+                    <div className="descricao">Tenha sempre a um toque a lista com os convidados
+                        que vão ou não participar do seu churras!</div>
+                </div>
+                <div className="cardFunc" data-aos="zoom-in" data-aos-delay="250">
+                    <div className="linha1">
+                        <div className="numFunc">2</div>
+                        <div className="titulo">Controle de Pagamento</div>
                     </div>
-                    <div className="Linha"></div>
-                    <div>
-                        <div className="Card">
-                            <div className="Conteudo">
-                                <div className="Item">
-                                    <label className="ItemNumero">1</label>
-                                    <div className="Circulo"></div>
-                                    <div className="TextoItems">
-                                        Criação Facilitada de Churrasco
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="Conteudo">
-                                <div className="Item">
-                                    <label className="ItemNumero">2</label>
-                                    <div className="Circulo"></div>
-                                    <div className="TextoItems">
-                                        Cálculo da quantidade de carne e bebida
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="Conteudo">
-                                <div className="Item">
-                                    <label className="ItemNumero">3</label>
-                                    <div className="Circulo"></div>
-                                    <div className="TextoItems">
-                                        <label>Calculadora do total a pagar por pessoa</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="Conteudo">
-                                <div className="Item">
-                                    <label className="ItemNumero">4</label>
-                                    <div className="Circulo"></div>
-                                    <div className="TextoItems">
-                                        Texto Sobre Funcionalidades
+                    <div className="descricao">Registre os convidados que ja te pagaram,
+                        e tenha de forma direta quem ainda falta pagar.</div>
+                </div>
+                <div className="cardFunc" data-aos="zoom-in" data-aos-delay="450">
+                    <div className="linha1">
+                        <div className="numFunc">3</div>
+                        <div className="titulo">Cálculo de Preço do Churrasco</div>
                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="Card">
-                            <div className="Conteudo">
-                                <div className="Item">
-                                    <label className="ItemNumero">5</label>
-                                    <div className="Circulo"></div>
-                                    <div className="TextoItems">
-                                        Texto Sobre Funcionalidades
+                    <div className="descricao">Nós calculamos quanto vai custar o seu churrasco,
+                        com base nos itens que você deseja servir, e dividirmos para os seus amigos de forma automatica.</div>
+                </div>
+                <div className="cardFunc" data-aos="zoom-in" data-aos-delay="650">
+                    <div className="linha1">
+                        <div className="numFunc">4</div>
+                        <div className="titulo">Sugestão para Itens e Quantidades</div>
                     </div>
-                                </div>
-                            </div>
-                            <div className="Conteudo">
-                                <div className="Item">
-                                    <label className="ItemNumero">6</label>
-                                    <div className="Circulo"></div>
-                                    <div className="TextoItems">
-                                        Texto Sobre Funcionalidades
+                    <div className="descricao">Separamos uma sugestão de itens para o seu churras, levando em conta o numero de convidados, agilizando a criação do seu evento.</div>
+                </div>
+                <div className="cardFunc" data-aos="zoom-in" data-aos-delay="850">
+                    <div className="linha1">
+                        <div className="numFunc">5</div>
+                        <div className="titulo">Limite para Confirmação de Presença</div>
                     </div>
-                                </div>
-                            </div>
-                            <div className="Conteudo">
-                                <div className="Item">
-                                    <label className="ItemNumero">7</label>
-                                    <div className="Circulo"></div>
-                                    <div className="TextoItems">
-                                        Texto Sobre Funcionalidades
+                    <div className="descricao">No Churrapp você pode definir uma data limite para a confirmação de presença, evitando surpresas no churrasco.</div>
+                </div>
+                <div className="cardFunc" data-aos="zoom-in" data-aos-delay="1050">
+                    <div className="linha1">
+                        <div className="numFunc">6</div>
+                        <div className="titulo">Cardapio Vegano e Vegetariano</div>
                     </div>
-                                </div>
-                            </div>
-                            <div className="Conteudo">
-                                <div className="Item">
-                                    <label className="ItemNumero">8</label>
-                                    <div className="Circulo"></div>
-                                    <div className="TextoItems">
-                                        Texto Sobre Funcionalidades
+                    <div className="descricao">Nós montamos uma lsita de itens vegetarianos e veganos para que todos os seus amigos possam curtir com você, mesmo os que não comem carne.</div>
+                </div>
+                <div className="cardFunc" data-aos="zoom-in" data-aos-delay="1250">
+                    <div className="linha1">
+                        <div className="numFunc">7</div>
+                        <div className="titulo">Histórico de Churrascos</div>
                     </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="descricao">Lembra aquele churrasco super legal que a comida estava deliciosa, os papos estavem divertidos? Nós lembramos todos o churrascos para que você possa consultar e repetir.</div>
+                </div>
+                <div className="cardFunc" data-aos="zoom-in" data-aos-delay="1450">
+                    <div className="linha1">
+                        <div className="numFunc">8</div>
+                        <div className="titulo">Lembrete de Carvão e Acendedor</div>
                     </div>
+                    <div className="descricao">Itens essenciais para um churrasco, mas que as vezes esquecemos, o Churrapp te lembra!</div>
                 </div>
             </div>
         </div>

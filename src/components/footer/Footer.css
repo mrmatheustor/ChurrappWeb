@@ -12,13 +12,3 @@
     padding: 10px;
     color: lightgray;
 }
-
-@media screen and (max-width: 1024px) {
-    .Footer {
-        display: flex;
-        background-color: black;
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-    }
-}
