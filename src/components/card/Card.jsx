@@ -7,6 +7,9 @@ import Icon from '../../assets/image/icon.png';
 import GooglePlay from '../../assets/image/google-play-badge.png';
 import { Player } from 'video-react'
 import AliceCarousel from 'react-alice-carousel';
+import Aos from "aos"
+import "aos/dist/aos.css"
+
 
 //appImgs
 import app1 from '../../assets/image/app/app1.jpeg';
@@ -88,6 +91,7 @@ export default function Card() {
 
     React.useEffect(() => {
         setChecked(true);
+        Aos.init({ duration: 3000 , delay:1000, once:true})
     }, []);
 
     return (
@@ -111,33 +115,31 @@ export default function Card() {
                 </Fade>
             </Modal>
             <div className="Tudo">
-                <Grow in={checked}>
-                    <div className="Card" style={{ background: 'maroon' }}>
-                        <div className="Conteudo" style={{ marginTop: '80px' }}>
-                            <div className="Churrapp">O que é o Churrapp?</div>
-                            <div className="Texto">
-                                O Churrapp é uma plataforma pensada para facilitar a organização do seu churrasco com os amigos.
-                                Desenvolvida para ser um grande aliado dos amantes de churrasco.
+                <div className="Card" style={{ background: 'maroon' }}>
+                    <div data-aos="zoom-in" data-aos-delay="50" className={"Conteudo leftSide1"}>
+                        <div className="Churrapp">O que é o Churrapp?</div>
+                        <div className="Texto">
+                            O Churrapp é uma plataforma pensada para facilitar a organização do seu churrasco com os amigos.
+                            Desenvolvida para ser um grande aliado dos amantes de churrasco.
                             </div>
-                            <a onClick={downloadChurrapp}><img src={GooglePlay} className="googlePlay" alt="Link para download" /></a>
-                        </div>
-                        <div className="Conteudo" style={{ marginTop: '80px' }}>
-                            <div className="Video">
-                                <Player playsInline
-                                    poster={Tumb}
-                                    src={Video}></Player>
-                            </div>
+                        {/* <a onClick={downloadChurrapp}><img src={GooglePlay} className="googlePlay" alt="Link para download" /></a> */}
+                        <div className="breveGooglePlay" > Breve no Google Play</div>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="500" className="Conteudo" style={{ marginTop: '80px' }}>
+                        <div className="Video">
+                            <Player playsInline
+                                poster={Tumb}
+                                src={Video}></Player>
                         </div>
                     </div>
-                </Grow>
+                </div>
                 <div className="Linha"></div>
-                <Grow in={checked} {...(checked ? { timeout: 1000 } : {})}>
+                <div data-aos="zoom-in-up" >
                     <AliceCarousel mouseTracking autoWidth={true} autoplay={true} infinite={true} items={items} />
-                </Grow>
+                </div>
                 <div className="Linha"></div>
                 <div className="Funcionalidades" id="Teste">
-                    <Zoom in={checked} style={{ transitionDelay: checked ? '250ms' : '0ms' }}>
-                    <div className="cardFunc">
+                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="50">
                         <div className="linha1">
                             <div className="numFunc">1</div>
                             <div className="titulo">Controle de Presença</div>
@@ -145,9 +147,7 @@ export default function Card() {
                         <div className="descricao">Tenha sempre a um toque a lista com os convidados
                         que vão ou não participar do seu churras!</div>
                     </div>
-                    </Zoom>
-                    <Zoom in={checked} style={{ transitionDelay: checked ? '500ms' : '0ms' }}>
-                    <div className="cardFunc">
+                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="250">
                         <div className="linha1">
                             <div className="numFunc">2</div>
                             <div className="titulo">Controle de Pagamento</div>
@@ -155,9 +155,7 @@ export default function Card() {
                         <div className="descricao">Registre os convidados que ja te pagaram,
                         e tenha de forma direta quem ainda falta pagar.</div>
                     </div>
-                    </Zoom>
-                    <Zoom in={checked} style={{ transitionDelay: checked ? '750ms' : '0ms' }}>
-                    <div className="cardFunc">
+                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="450">
                         <div className="linha1">
                             <div className="numFunc">3</div>
                             <div className="titulo">Cálculo de Preço do Churrasco</div>
@@ -165,53 +163,42 @@ export default function Card() {
                         <div className="descricao">Nós calculamos quanto vai custar o seu churrasco,
                         com base nos itens que você deseja servir, e dividirmos para os seus amigos de forma automatica.</div>
                     </div>
-                    </Zoom>
-                    <Zoom in={checked} style={{ transitionDelay: checked ? '1000ms' : '0ms' }}>
-                    <div className="cardFunc">
+                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="650">
                         <div className="linha1">
                             <div className="numFunc">4</div>
                             <div className="titulo">Sugestão para Itens e Quantidades</div>
                         </div>
                         <div className="descricao">Separamos uma sugestão de itens para o seu churras, levando em conta o numero de convidados, agilizando a criação do seu evento.</div>
                     </div>
-                    </Zoom>
-                    <Zoom in={checked} style={{ transitionDelay: checked ? '1250ms' : '0ms' }}>
-                   <div className="cardFunc">
+                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="850">
                         <div className="linha1">
                             <div className="numFunc">5</div>
                             <div className="titulo">Limite para Confirmação de Presença</div>
                         </div>
                         <div className="descricao">No Churrapp você pode definir uma data limite para a confirmação de presença, evitando surpresas no churrasco.</div>
                     </div>
-                    </Zoom>
-                    <Zoom in={checked} style={{ transitionDelay: checked ? '1500ms' : '0ms' }}>
-                   <div className="cardFunc">
+                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="1050">
                         <div className="linha1">
                             <div className="numFunc">6</div>
                             <div className="titulo">Cardapio Vegano e Vegetariano</div>
                         </div>
                         <div className="descricao">Nós montamos uma lsita de itens vegetarianos e veganos para que todos os seus amigos possam curtir com você, mesmo os que não comem carne.</div>
                     </div>
-                    </Zoom>
-                    <Zoom in={checked} style={{ transitionDelay: checked ? '1750ms' : '0ms' }}>
-                   <div className="cardFunc">
+                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="1250">
                         <div className="linha1">
                             <div className="numFunc">7</div>
                             <div className="titulo">Histórico de Churrascos</div>
                         </div>
                         <div className="descricao">Lembra aquele churrasco super legal que a comida estava deliciosa, os papos estavem divertidos? Nós lembramos todos o churrascos para que você possa consultar e repetir.</div>
                     </div>
-                    </Zoom>
-                    <Zoom in={checked} style={{ transitionDelay: checked ? '2000ms' : '0ms' }}>
-                   <div className="cardFunc">
+                    <div className="cardFunc" data-aos="zoom-in" data-aos-delay="1450">
                         <div className="linha1">
                             <div className="numFunc">8</div>
                             <div className="titulo">Lembrete de Carvão e Acendedor</div>
                         </div>
                         <div className="descricao">Itens essenciais para um churrasco, mas que as vezes esquecemos, o Churrapp te lembra!</div>
                     </div>
-                </Zoom>
-               </div>
+                </div>
             </div>
             <div className="TudoMobile">
                 <Grow in={checked}>

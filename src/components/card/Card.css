@@ -51,6 +51,7 @@
 .Funcionalidades{
     display: flex;
     flex-wrap: wrap;
+    background: lightgray;
 }
 .cardFunc{
     width: 23%;
@@ -124,9 +125,26 @@
     margin: 20px 50px;
 }
 
+.leftSide1{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
 .googlePlay{
     width: 50%;
     cursor: pointer;
+}
+
+.breveGooglePlay {
+    color: black;
+    font-family: poppins-medium;
+    margin-top: 50px;
+    box-shadow: 0px 0px 9px 4px lightgrey;
+    align-self: center;
+    background: lightgray;
+    padding: 10px;
+    font-size: 30px;
 }
 
 .Card .Conteudo .BtnGoogle {

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/image/icon.png';
+import logo from '../../assets/image/logoMaroon.png';
 import insta from '../../assets/image/insta.png';
 import email from '../../assets/image/email.png';
 
@@ -19,7 +19,6 @@ export default function Header() {
         <div className="Header">
             <div className="TituloBox">
                 <img src={logo} alt="" className="App-logo"></img>
-                <h1 className="Titulo">Churrapp</h1>
             </div>
             <div className="TituloBox">
                 <img src={insta} alt="" className="insta" onClick={instaChurrapp}></img>
