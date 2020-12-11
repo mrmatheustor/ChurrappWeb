@@ -120,6 +120,7 @@ export default function Card() {
                     {/* <a onClick={downloadChurrapp}><img src={GooglePlay} className="googlePlay" alt="Link para download" /></a> */}
                     <div className="breveGooglePlay" > Breve no Google Play</div>
                 </div>
+                <img src={Icon} alt="" hidden={true}/>
                 <div data-aos="zoom-in" data-aos-delay="500" className="Video">
                     <Player playsInline style={{paddingTop:'50%'}} poster={app10} src='https://churrappuploadteste.s3.amazonaws.com/churrappWeb/videoChurrapp.mp4'></Player>
                 </div>
