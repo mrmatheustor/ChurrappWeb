@@ -126,7 +126,7 @@ export default function Card() {
             </div>
             <div className="Linha"></div>
             <div data-aos="zoom-in-up" >
-                <AliceCarousel mouseTracking autoWidth={true} autoplay={true} infinite={true} items={items} />
+                <AliceCarousel mouseTracking autoWidth={true} disableDotsControls={true} autoplay={true} infinite={true} items={items} />
             </div>
             <div className="Linha"></div>
             <div className="Funcionalidades" id="Teste">
